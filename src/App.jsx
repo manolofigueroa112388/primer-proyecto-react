@@ -4,12 +4,19 @@ import Sidebar from './componentes/Sidebar'
 import Tarjeta from './componentes/Tarjeta'
 import PiePagina from './componentes/PiePagina'
 import Mipresentacion from './componentes/Mipresentacion'
+import fotoPerfil from './Images/foto.jpg'
 
 function App(){
   const programa = 'ADSO'
+  const usuario = {
+  correo: 'manolotrading23@hotmail.com',
+  nombre: 'Manuel Andrés Figueroa Urbano',
+  rol: 'Aprendiz ADSO',
+  foto: fotoPerfil,
+}
   return(
     <div className="layout">
-      <Encabezado />
+      <Encabezado usuario={usuario} />
       
       {/* Este contenedor alinea el Sidebar a la izquierda y el Contenido a la derecha */}
       <div className="contenedor-cuerpo">
