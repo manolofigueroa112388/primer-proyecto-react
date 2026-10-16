@@ -1,37 +1,15 @@
 import React from 'react';
 
-function Mipresentacion() {
-  return (
-    <div className="Mipresentacion-card">
-      <div className="Mipresentacion-header">
-        <h1>Mi presentación</h1>
-      </div>
-      
-      <div className="Mipresentacion-info">
-        <div className="info-item">
-          <span className="info-label">Nombre</span>
-          <span className="info-value">Manuel Andrés Figueroa Urbano</span>
-        </div>
-        
-        <div className="info-item">
-          <span className="info-label">Barrio</span>
-          <span className="info-value">San Rafael</span>
-        </div>
-        
-        <div className="info-item">
-          <span className="info-label">Correo</span>
-          <a href="mailto:manolotrading23@hotmail.com" className="info-value link">
-            manolotrading23@hotmail.com
-          </a>
-        </div>
-        
-        <div className="info-item">
-          <span className="info-label">Teléfono</span>
-          <span className="info-value">3136225525</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+function Mipresentacion({ Nombre, Barrio, Correo, Telefono }) {
+    return (        
+        <article className="Mipresentacion">            
+            <h2>Mi presentación</h2>            
+            <p className="presentacion-nombre">{Nombre}</p>                     
+            <p><strong>Barrio:</strong> {Barrio}</p>            
+            <p><strong>Correo:</strong> <a href={`mailto:${Correo}`}>{Correo}</a></p>            
+            <p><strong>Teléfono:</strong> <a href={`tel:${Telefono}`}>{Telefono}</a></p>        
+        </article>    
+    ); 
+} 
 
 export default Mipresentacion;

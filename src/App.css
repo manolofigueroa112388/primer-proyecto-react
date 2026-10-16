@@ -555,3 +555,134 @@ body {
   background-color: #4f46e5;
   color: #ffffff;
 }
+
+.Mipresentacion {
+    background: #ffffff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin: 30px auto;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Efecto hover elegante al elevar la tarjeta */
+.Mipresentacion:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Banner superior con degradado atractivo */
+.presentacion-banner {
+    background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%);
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Círculo de avatar flotante */
+.presentacion-avatar {
+    width: 76px;
+    height: 76px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 4px solid #ffffff;
+}
+
+.presentacion-avatar span {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #3182ce;
+}
+
+/* Contenedor interior de los datos */
+.presentacion-contenido {
+    padding: 48px 32px 32px 32px;
+    text-align: center;
+}
+
+/* Título de sección */
+.Mipresentacion h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #718096;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+/* Nombre principal */
+.Mipresentacion .presentacion-nombre {
+    font-size: 1.6rem;
+    color: #1a202c;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+/* Lista de datos con diseño en filas limpias */
+.presentacion-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+}
+
+.dato-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icono {
+    font-size: 1.25rem;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.etiqueta {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #a0aec0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.valor {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Enlaces interactivos */
+.Mipresentacion a {
+    color: #3182ce;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.Mipresentacion a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}

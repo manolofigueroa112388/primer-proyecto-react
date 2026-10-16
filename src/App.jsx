@@ -24,7 +24,10 @@ function App(){
         
         <main className="contenido">
           <h2>Bienvenidos al programa {programa}</h2>
-          <Mipresentacion />
+          <Mipresentacion 
+            Barrio = "San Rafael"
+            Correo = "manolotrading23@hotmail.com"
+            Telefono = "3136225525"/>
           
           <section className="tarjetas">
             <Tarjeta
