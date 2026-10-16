@@ -445,3 +445,113 @@ body {
   background-color: #fff1f2;
   color: #be123c;
 }
+
+.tarjeta,
+.Tarjeta,
+.tarjeta-destacada {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 320px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 36px 28px;
+  
+  /* Centrado total de contenido interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centra icono, título, descripción y horas horizontalmente */
+  justify-content: center;
+  text-align: center;     /* Centra todo el texto */
+  gap: 16px;
+
+  /* Sombras suaves y bordes limpios */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  
+  /* Efecto de movimiento suave estilo Vite */
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Efecto HoverFlotante en todas las tarjetas */
+.tarjeta:hover,
+.Tarjeta:hover,
+.tarjeta-destacada:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* --- DISTINCIÓN EXCLUSIVA PARA LA DESTACADA (Solo borde y badge) --- */
+.tarjeta-destacada {
+  border: 2px solid #6366f1;
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.12);
+}
+
+.tarjeta-destacada:hover {
+  border-color: #4f46e5;
+  box-shadow: 0 22px 45px rgba(99, 102, 241, 0.22);
+}
+
+/* --- ICONO --- */
+.terjeta-icono,
+.tarjeta-icono {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover .terjeta-icono,
+.tarjeta:hover .tarjeta-icono,
+.tarjeta-destacada:hover .terjeta-icono {
+  transform: scale(1.12);
+}
+
+/* --- TÍTULO (h3) --- */
+.tarjeta h3,
+.Tarjeta h3,
+.tarjeta-destacada h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* --- DESCRIPCIÓN (p) --- */
+.tarjeta p,
+.Tarjeta p,
+.tarjeta-destacada p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --- BADGE DE HORAS CENTRADO --- */
+.tarjeta-horas {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4f46e5;
+  background-color: #e0e7ff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Estilo del badge para la destacada */
+.tarjeta-destacada .tarjeta-horas {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
