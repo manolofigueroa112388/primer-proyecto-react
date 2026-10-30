@@ -2,9 +2,13 @@ import './App.css'
 import Encabezado from './componentes/Encabezado'
 import Sidebar from './componentes/Sidebar'
 import Tarjeta from './componentes/Tarjeta'
+import { tecnologias } from './data/tecnologias'
 import PiePagina from './componentes/PiePagina'
 import Mipresentacion from './componentes/Mipresentacion'
 import fotoPerfil from './Images/foto.jpg'
+import Inicio from "./pages/Inicio"
+import Perfil from "./pages/Perfil"
+import { Route, Routes } from 'react-router'
 
 function App(){
   const programa = 'ADSO'
@@ -15,46 +19,23 @@ function App(){
   foto: fotoPerfil,
 }
   return(
+    
     <div className="layout">
       <Encabezado usuario={usuario} />
-      
-      {/* Este contenedor alinea el Sidebar a la izquierda y el Contenido a la derecha */}
-      <div className="contenedor-cuerpo">
-        <Sidebar />
-        
+      <Sidebar />
+      <div className="contenedor-cuerpo"> 
         <main className="contenido">
-          <h2>Bienvenidos al programa {programa}</h2>
-          <Mipresentacion 
-            Barrio = "San Rafael"
-            Correo = "manolotrading23@hotmail.com"
-            Telefono = "3136225525"/>
-          
-          <section className="tarjetas">
-            <Tarjeta
-              icono = "⚛️"
-              titulo = "React"
-              descripcion = "Herramienta de javascript para construir interfaz con componentes"
-              horas = {120}
-              destacada = {true} />
-            <Tarjeta
-              icono = "⚡"
-              titulo = "vite"
-              descripcion = "Herramienta que crea, ejecuta y empaqueta el proyecto"
-              horas = {60}
-              destacada={false}/>
-            <Tarjeta
-              icono = "🔎"
-              titulo = "ESLint"
-              descripcion = "Herramienta que crea, ejecuta y empaqueta el proyecto" 
-              horas = {20}
-              destacada={true}/>
-          </section>
+          <Routes>
+            <Route path="/" element={<Inicio />}/>
+            <Route path="/perfil" element = {<Perfil />} />
+          </Routes>
         </main>
+        <PiePagina />
       </div>
 
-      <PiePagina />
+     
     </div>
   )
 }
 
-export default App
+export default App;

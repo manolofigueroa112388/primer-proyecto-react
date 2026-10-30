@@ -1,3 +1,4 @@
+import { opcionesMenu } from '../data/menu.js';
 import React from 'react';
 
 function Sidebar() {
@@ -6,13 +7,15 @@ function Sidebar() {
       <div>
         <h2 className="sidebar-titulo">Hola Manuel Andrés</h2>
         <h3 className="sidebar-titulo">Menú</h3>
-        <nav>
+        <nav> 
           <ul className="sidebar-menu">
-            <li><a href="#inicio">🏘️ Inicio</a></li>
-            <li><a href="#perfil">😎 Mi perfil</a></li>
-            <li><a href="#tecnologias">🖥️ Tecnologías</a></li>
-            <li><a href="#recursos">💰 Recursos</a></li>
-            <li><a href="#contacto">😒 Contacto</a></li>
+            {opcionesMenu.map((opcion) => (
+              <li key={opcion.id}>
+                <a href={opcion.url}>
+                  {opcion.icono} {opcion.texto}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
